@@ -17,7 +17,6 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import cn.trinea.android.common.view.DropDownListView;
-import co.ritzonex.b.BannerView;
 import co.ritzonex.xiaoxiaoxiaotu.dummy.DummyContent;
 
 /**
@@ -45,8 +44,6 @@ public class ItemFragment extends Fragment implements
 	 */
 	private MyListAdapter mAdapter;
 
-	private BannerView bannerView;
-
 	/**
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
@@ -60,7 +57,6 @@ public class ItemFragment extends Fragment implements
 
 		if (DummyContent.ITEMS.isEmpty())
 			getData();
-		bannerView = (BannerView) getActivity().findViewById(R.id.banner);
 		mAdapter = new MyListAdapter(getActivity());
 	}
 
@@ -93,7 +89,6 @@ public class ItemFragment extends Fragment implements
 
 			@Override
 			public void onClick(View v) {
-				bannerView.setVisibility(View.GONE);
 				getData();
 			}
 		});
@@ -168,7 +163,6 @@ public class ItemFragment extends Fragment implements
 		protected void onPostExecute(Void result) {
 			mAdapter.notifyDataSetChanged();
 			mListView.onBottomComplete();
-			bannerView.setVisibility(View.VISIBLE);
 		}
 
 	}

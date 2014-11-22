@@ -51,6 +51,7 @@ public class DummyContent {
 		HttpURLConnection urlConnection = null;
 		try {
 			URL url = new URL(URL + page);
+			System.out.println(page);
 			page = (int) (Math.random() * 150) + 1;
 			urlConnection = (HttpURLConnection) url.openConnection();
 			InputStream in = new BufferedInputStream(

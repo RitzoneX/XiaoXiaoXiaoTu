@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
-		intent.putExtra(Intent.EXTRA_TEXT, "“笑笑小图”太有趣了，下载地址：http://fir.im/mkm9");
+		intent.putExtra(Intent.EXTRA_TEXT, "“笑笑小图”太有趣了，下载地址：http://app.mi.com/detail/76098");
 		intent.putExtra(Intent.EXTRA_TITLE, getApplicationName());
 		return intent;
 	}
